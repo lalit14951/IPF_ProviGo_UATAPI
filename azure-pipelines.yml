@@ -1,0 +1,52 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- script: echo Hello, world!
+  displayName: 'Run a one-line script'
+
+- script: |
+    echo Add other tasks to build, test, and deploy your project.
+    echo See https://aka.ms/yaml
+  displayName: 'Run a multi-line script'
+- task: Npm@1
+  inputs:
+    command: 'custom'
+    customCommand: 'install newman -g'
+
+- task: Npm@1
+  inputs:
+    command: 'custom'
+    customCommand: 'install -g newman-reporter-htmlextra'
+
+- task: CmdLine@2
+  inputs:
+    script: newman run CustomerAppBackendPublicSIT.postman_collection.json -r htmlextra --reporters cli,junit,json,htmlextra --reporter-junit-export "junitReport.xml" --reporter-htmlextra-export "TestReport.html"
+
+- task: CopyFiles@2
+  inputs:
+    Contents: '*.html'
+    TargetFolder: '$(build.artifactstagingdirectory)'
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    #ArtifactName: 'OutputTestNGResultsXML'
+    publishLocation: 'Container'
+
+- task: CopyFiles@2
+  inputs:
+    Contents: '*.xml'
+    TargetFolder: '$(build.artifactstagingdirectory)'
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    #ArtifactName: 'OutputTestNGResultsXML'
+    publishLocation: 'Container'
