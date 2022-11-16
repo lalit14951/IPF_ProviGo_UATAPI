@@ -40,13 +40,3 @@ steps:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     #ArtifactName: 'OutputTestNGResultsXML'
     publishLocation: 'Container'
-
-- task: CopyFiles@2
-  inputs:
-    Contents: '*.xml'
-    TargetFolder: '$(build.artifactstagingdirectory)'
-- task: PublishBuildArtifacts@1
-  inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-    #ArtifactName: 'OutputTestNGResultsXML'
-    publishLocation: 'Container'
