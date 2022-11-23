@@ -40,3 +40,4 @@ steps:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     #ArtifactName: 'OutputTestNGResultsXML'
     publishLocation: 'Container'
+  condition: succeededorFailed()
