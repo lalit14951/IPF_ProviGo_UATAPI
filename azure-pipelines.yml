@@ -21,7 +21,7 @@ steps:
 - task: CopyFiles@2
   inputs:
 #    Contents: '*.html'
-    Contents: 'TestReport.html'
+    Contents: 'TestReport.h'
     TargetFolder: '$(build.artifactstagingdirectory)'
 
 - task: Npm@1
