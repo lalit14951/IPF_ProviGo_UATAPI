@@ -18,6 +18,12 @@ steps:
 #    command: 'custom'
 #    customCommand: 'install newman -g'
 
+- task: CopyFiles@2
+  inputs:
+#    Contents: '*.html'
+    Contents: 'TestReport.html'
+    TargetFolder: '$(build.artifactstagingdirectory)'
+
 - task: Npm@1
   inputs:
     command: 'custom'
