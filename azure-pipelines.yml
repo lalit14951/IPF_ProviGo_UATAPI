@@ -10,8 +10,8 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
+#- script: echo Hello, world!
+#  displayName: 'Run a one-line script'
 
 #- task: Npm@1
 #  inputs:
@@ -28,10 +28,8 @@ steps:
     script: newman run Ipf.CusApp.Backend-Public-uat.postman_collection.json -r htmlextra --reporters cli,junit,json,htmlextra --reporter-junit-export "junitReport.xml" --reporter-htmlextra-export "TestReport.html"
 
 - task: CopyFiles@2
-  inputs:    
-    #condition:succeededOrFailed()
+  inputs:        
     Contents: '*.html'
-    #Contents: 'TestReport.html'
     TargetFolder: '$(build.artifactstagingdirectory)'
   condition: succeededorFailed()
     
@@ -41,3 +39,14 @@ steps:
     #ArtifactName: 'OutputTestNGResultsXML'
     publishLocation: 'Container'
   condition: succeededorFailed()
+  
+- task: CopyFiles@2
+  inputs:
+    Contents: '*.xml'
+    TargetFolder: '$(build.artifactstagingdirectory)'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    #ArtifactName: 'OutputTestNGResultsXML'
+    publishLocation: 'Container'
