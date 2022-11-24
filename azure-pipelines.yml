@@ -25,7 +25,7 @@ steps:
 
 - task: CmdLine@2
   inputs:
-    script: newman run Ipf.CusApp.Backend-Public-uat.postman_collection.json -r htmlextra --reporters cli,junit,json,htmlextra --reporter-junit-export "junitReport.xml" --reporter-htmlextra-export "TestReport.html"
+    script: newman run Ipf.CusApp.Backend-Public-uat.postman_collection.json -r htmlextra --reporters cli,junit,json,htmlextra --reporter-junit-export "junitReport.xml" --reporter-htmlextra-export "TestReport.html" --reporter-htmlextra-logs "Console.log"
 
 - task: CopyFiles@2
   inputs:        
@@ -45,6 +45,22 @@ steps:
     Contents: '*.xml'
     TargetFolder: '$(build.artifactstagingdirectory)'
 
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    #ArtifactName: 'OutputTestNGResultsXML'
+    publishLocation: 'Container'
+
+- task: PublishTestResults@2
+  inputs:
+    testResultsFormat: 'JUnit'
+    testResultsFiles: '*.xml'
+    testRunTitle: 'Results'
+
+- task: CopyFiles@2
+  inputs:
+    Contents: '*.log'
+    TargetFolder: '$(build.artifactstagingdirectory)'
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
