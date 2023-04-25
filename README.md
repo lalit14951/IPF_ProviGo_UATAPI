@@ -23,5 +23,13 @@ Collection of GET request APIs used in ProviGo mobile app. Functionally these AP
 - profiles
 - marketingContent
 - messages
+- agreements/{agreementId}
+- agreements/{agreementId}/debtCases
+- agreements/{agreementId}/events
+- agreements/{agreementId}/features/insurance
+- agreements/{agreementId}/features/paymentHoliday
+- agreements/{agreementId}/payments/expected
+- profiles/consents
+- profiles/notifications/eventGroups/disabled
 
 The pipeline can be seen [in here](https://dev.azure.com/IPF-International-Limited/CusApp/_build?definitionId=1197). (requires access)
