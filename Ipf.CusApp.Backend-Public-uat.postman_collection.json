@@ -1,0 +1,3127 @@
+{
+	"info": {
+		"_postman_id": "3c489fd3-a162-48a3-855b-67786b330228",
+		"name": "Ipf.CusApp.Backend-Public-uat",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25950372",
+		"_collection_link": "https://restless-meteor-851356.postman.co/workspace/Team-Workspace~a79449f8-6cdb-4514-8925-891152ad6d04/collection/23443635-3c489fd3-a162-48a3-855b-67786b330228?action=share&creator=25950372&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "admin",
+			"item": [
+				{
+					"name": "messageCategories",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Is status code 200?\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{deviceToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "E3vYcF*cBINFeeL}E,chah-,B?rzeyxC",
+								"type": "text"
+							},
+							{
+								"key": "X-Market-Id",
+								"value": "POL1",
+								"type": "text"
+							},
+							{
+								"key": "X-Message-Id",
+								"value": "c7b40ce6-5814-4f8e-acb1-bde2e7bb9af0",
+								"type": "text"
+							},
+							{
+								"key": "X-Business-Transaction-Id",
+								"value": "c7b40ce6-5814-4f8e-acb1-bde2e7bb9af1",
+								"type": "text"
+							},
+							{
+								"key": "X-Business-Transaction-Name",
+								"value": "Ad-Hoc-Test",
+								"type": "text"
+							},
+							{
+								"key": "X-Locale",
+								"value": "pl-PL",
+								"type": "text"
+							},
+							{
+								"key": "X-Currency-Code",
+								"value": "PLN",
+								"type": "text"
+							},
+							{
+								"key": "X-Timestamp",
+								"value": "2022-09-20T09:23:50.5262066Z",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/admin/messageCategories?applicationId=ipf.customer.app",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"admin",
+								"messageCategories"
+							],
+							"query": [
+								{
+									"key": "applicationId",
+									"value": "ipf.customer.app"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "messageTemplates",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Is status code 200?\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{deviceToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "E3vYcF*cBINFeeL}E,chah-,B?rzeyxC",
+								"type": "text"
+							},
+							{
+								"key": "X-Market-Id",
+								"value": "POL1",
+								"type": "text"
+							},
+							{
+								"key": "X-Message-Id",
+								"value": "c7b40ce6-5814-4f8e-acb1-bde2e7bb9af0",
+								"type": "text"
+							},
+							{
+								"key": "X-Business-Transaction-Id",
+								"value": "c7b40ce6-5814-4f8e-acb1-bde2e7bb9af1",
+								"type": "text"
+							},
+							{
+								"key": "X-Business-Transaction-Name",
+								"value": "Ad-Hoc-Test",
+								"type": "text"
+							},
+							{
+								"key": "X-Locale",
+								"value": "pl-PL",
+								"type": "text"
+							},
+							{
+								"key": "X-Currency-Code",
+								"value": "PLN",
+								"type": "text"
+							},
+							{
+								"key": "X-Timestamp",
+								"value": "2022-09-20T09:23:50.5262066Z",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/admin/messageTemplates?applicationId=ipf.customer.app",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"admin",
+								"messageTemplates"
+							],
+							"query": [
+								{
+									"key": "applicationId",
+									"value": "ipf.customer.app"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "devices",
+			"item": [
+				{
+					"name": "status",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Is status code 200?\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{deviceToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "E3vYcF*cBINFeeL}E,chah-,B?rzeyxC",
+								"type": "text"
+							},
+							{
+								"key": "X-Market-Id",
+								"value": "POL1",
+								"type": "text"
+							},
+							{
+								"key": "X-Message-Id",
+								"value": "c7b40ce6-5814-4f8e-acb1-bde2e7bb9af0",
+								"type": "text"
+							},
+							{
+								"key": "X-Business-Transaction-Id",
+								"value": "c7b40ce6-5814-4f8e-acb1-bde2e7bb9af1",
+								"type": "text"
+							},
+							{
+								"key": "X-Business-Transaction-Name",
+								"value": "Ad-Hoc-Test",
+								"type": "text"
+							},
+							{
+								"key": "X-Locale",
+								"value": "pl-PL",
+								"type": "text"
+							},
+							{
+								"key": "X-Currency-Code",
+								"value": "PLN",
+								"type": "text"
+							},
+							{
+								"key": "X-Timestamp",
+								"value": "2022-09-20T09:23:50.5262066Z",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/devices/status?applicationId=ipf.customer.app",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"devices",
+								"status"
+							],
+							"query": [
+								{
+									"key": "applicationId",
+									"value": "ipf.customer.app"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "products",
+			"item": [
+				{
+					"name": "InsuranceProducts",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Is status code 200?\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{deviceToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "E3vYcF*cBINFeeL}E,chah-,B?rzeyxC",
+								"type": "text"
+							},
+							{
+								"key": "X-Market-Id",
+								"value": "POL1",
+								"type": "text"
+							},
+							{
+								"key": "X-Message-Id",
+								"value": "c7b40ce6-5814-4f8e-acb1-bde2e7bb9af0",
+								"type": "text"
+							},
+							{
+								"key": "X-Business-Transaction-Id",
+								"value": "c7b40ce6-5814-4f8e-acb1-bde2e7bb9af1",
+								"type": "text"
+							},
+							{
+								"key": "X-Business-Transaction-Name",
+								"value": "Ad-Hoc-Test",
+								"type": "text"
+							},
+							{
+								"key": "X-Locale",
+								"value": "pl-PL",
+								"type": "text"
+							},
+							{
+								"key": "X-Currency-Code",
+								"value": "PLN",
+								"type": "text"
+							},
+							{
+								"key": "X-Timestamp",
+								"value": "2022-09-20T09:23:50.5262066Z",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/products/insurance/products?applicationId=ipf.customer.app",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"products",
+								"insurance",
+								"products"
+							],
+							"query": [
+								{
+									"key": "applicationId",
+									"value": "ipf.customer.app"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "products",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Is status code 200?\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{deviceToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "E3vYcF*cBINFeeL}E,chah-,B?rzeyxC",
+								"type": "text"
+							},
+							{
+								"key": "X-Market-Id",
+								"value": "POL1",
+								"type": "text"
+							},
+							{
+								"key": "X-Message-Id",
+								"value": "c7b40ce6-5814-4f8e-acb1-bde2e7bb9af0",
+								"type": "text"
+							},
+							{
+								"key": "X-Business-Transaction-Id",
+								"value": "c7b40ce6-5814-4f8e-acb1-bde2e7bb9af1",
+								"type": "text"
+							},
+							{
+								"key": "X-Business-Transaction-Name",
+								"value": "Ad-Hoc-Test",
+								"type": "text"
+							},
+							{
+								"key": "X-Locale",
+								"value": "pl-PL",
+								"type": "text"
+							},
+							{
+								"key": "X-Currency-Code",
+								"value": "PLN",
+								"type": "text"
+							},
+							{
+								"key": "X-Timestamp",
+								"value": "2022-09-20T09:23:50.5262066Z",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/products?applicationId=ipf.customer.app",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"products"
+							],
+							"query": [
+								{
+									"key": "applicationId",
+									"value": "ipf.customer.app"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/products/{productId}/productIssues Copy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Is status code 200?\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{userToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "E3vYcF*cBINFeeL}E,chah-,B?rzeyxC",
+								"type": "text"
+							},
+							{
+								"key": "X-Market-Id",
+								"value": "POL1",
+								"type": "text"
+							},
+							{
+								"key": "X-Message-Id",
+								"value": "c7b40ce6-5814-4f8e-acb1-bde2e7bb9af0",
+								"type": "text"
+							},
+							{
+								"key": "X-Business-Transaction-Id",
+								"value": "c7b40ce6-5814-4f8e-acb1-bde2e7bb9af1",
+								"type": "text"
+							},
+							{
+								"key": "X-Business-Transaction-Name",
+								"value": "Ad-Hoc-Test",
+								"type": "text"
+							},
+							{
+								"key": "X-Locale",
+								"value": "pl-PL",
+								"type": "text"
+							},
+							{
+								"key": "X-Currency-Code",
+								"value": "PLN",
+								"type": "text"
+							},
+							{
+								"key": "X-Timestamp",
+								"value": "2022-09-20T09:23:50.5262066Z",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/products/{{productId}}/productIssues",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"",
+								"products",
+								"{{productId}}",
+								"productIssues"
+							],
+							"query": [
+								{
+									"key": "applicationId",
+									"value": "ipf.customer.app",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "productProperties",
+			"item": [
+				{
+					"name": "/productProperties",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Is status code 200?\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{deviceToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "E3vYcF*cBINFeeL}E,chah-,B?rzeyxC",
+								"type": "text"
+							},
+							{
+								"key": "X-Market-Id",
+								"value": "POL1",
+								"type": "text"
+							},
+							{
+								"key": "X-Message-Id",
+								"value": "c7b40ce6-5814-4f8e-acb1-bde2e7bb9af0",
+								"type": "text"
+							},
+							{
+								"key": "X-Business-Transaction-Id",
+								"value": "c7b40ce6-5814-4f8e-acb1-bde2e7bb9af1",
+								"type": "text"
+							},
+							{
+								"key": "X-Business-Transaction-Name",
+								"value": "Ad-Hoc-Test",
+								"type": "text"
+							},
+							{
+								"key": "X-Locale",
+								"value": "pl-PL",
+								"type": "text"
+							},
+							{
+								"key": "X-Currency-Code",
+								"value": "PLN",
+								"type": "text"
+							},
+							{
+								"key": "X-Timestamp",
+								"value": "2022-09-20T09:23:50.5262066Z",
+								"type": "text"
+							},
+							{
+								"key": "If-None-Match",
+								"value": "0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/productProperties",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"productProperties"
+							],
+							"query": [
+								{
+									"key": "applicationId",
+									"value": "ipf.customer.app",
+									"disabled": true
+								},
+								{
+									"key": "ETag",
+									"value": "If-None-Match",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "referenceData",
+			"item": [
+				{
+					"name": "/referenceData",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Is status code 200?\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{deviceToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "E3vYcF*cBINFeeL}E,chah-,B?rzeyxC",
+								"type": "text"
+							},
+							{
+								"key": "X-Market-Id",
+								"value": "POL1",
+								"type": "text"
+							},
+							{
+								"key": "X-Message-Id",
+								"value": "c7b40ce6-5814-4f8e-acb1-bde2e7bb9af0",
+								"type": "text"
+							},
+							{
+								"key": "X-Business-Transaction-Id",
+								"value": "c7b40ce6-5814-4f8e-acb1-bde2e7bb9af1",
+								"type": "text"
+							},
+							{
+								"key": "X-Business-Transaction-Name",
+								"value": "Ad-Hoc-Test",
+								"type": "text"
+							},
+							{
+								"key": "X-Locale",
+								"value": "pl-PL",
+								"type": "text"
+							},
+							{
+								"key": "X-Currency-Code",
+								"value": "PLN",
+								"type": "text"
+							},
+							{
+								"key": "X-Timestamp",
+								"value": "2022-09-20T09:23:50.5262066Z",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/referenceData?applicationId=ipf.customer.app",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"referenceData"
+							],
+							"query": [
+								{
+									"key": "applicationId",
+									"value": "ipf.customer.app"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Token",
+			"item": [
+				{
+					"name": "GeneratingASKToken",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"const jsonResponse = pm.response.json();\r",
+									"pm.collectionVariables.set(\"askToken\", jsonResponse.access_token);\r",
+									"console.log(pm.collectionVariables.get(\"askToken\"));"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://services-test.provident.pl:20709/oauth2/token?client_id=4FPdGyL3bvlfgsKt4Ahdfj8dRHIa&client_secret=ANRKzB4USeBBJ7IAGe3cyrEQChUa&grant_type=password&scope=openid&username=grazyna.kuzniewska&password=Asdqwe123!",
+							"protocol": "https",
+							"host": [
+								"services-test",
+								"provident",
+								"pl"
+							],
+							"port": "20709",
+							"path": [
+								"oauth2",
+								"token"
+							],
+							"query": [
+								{
+									"key": "client_id",
+									"value": "4FPdGyL3bvlfgsKt4Ahdfj8dRHIa"
+								},
+								{
+									"key": "client_secret",
+									"value": "ANRKzB4USeBBJ7IAGe3cyrEQChUa"
+								},
+								{
+									"key": "grant_type",
+									"value": "password"
+								},
+								{
+									"key": "scope",
+									"value": "openid"
+								},
+								{
+									"key": "username",
+									"value": "grazyna.kuzniewska"
+								},
+								{
+									"key": "password",
+									"value": "Asdqwe123!"
+								},
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "workforce",
+			"item": [
+				{
+					"name": "messageTemplates",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Is status code 200?\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{deviceToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "E3vYcF*cBINFeeL}E,chah-,B?rzeyxC",
+								"type": "text"
+							},
+							{
+								"key": "X-Market-Id",
+								"value": "POL1",
+								"type": "text"
+							},
+							{
+								"key": "X-Message-Id",
+								"value": "c7b40ce6-5814-4f8e-acb1-bde2e7bb9af0",
+								"type": "text"
+							},
+							{
+								"key": "X-Business-Transaction-Id",
+								"value": "c7b40ce6-5814-4f8e-acb1-bde2e7bb9af1",
+								"type": "text"
+							},
+							{
+								"key": "X-Business-Transaction-Name",
+								"value": "Ad-Hoc-Test",
+								"type": "text"
+							},
+							{
+								"key": "X-Locale",
+								"value": "pl-PL",
+								"type": "text"
+							},
+							{
+								"key": "X-Currency-Code",
+								"value": "PLN",
+								"type": "text"
+							},
+							{
+								"key": "X-Timestamp",
+								"value": "2022-09-20T09:23:50.5262066Z",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/workforce/messageTemplates?applicationId=ipf.customer.app",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"workforce",
+								"messageTemplates"
+							],
+							"query": [
+								{
+									"key": "applicationId",
+									"value": "ipf.customer.app"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "workforce/users",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Is status code 200?\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{askToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "E3vYcF*cBINFeeL}E,chah-,B?rzeyxC",
+								"type": "text"
+							},
+							{
+								"key": "X-Market-Id",
+								"value": "POL1",
+								"type": "text"
+							},
+							{
+								"key": "X-Message-Id",
+								"value": "1f28b3b1-6fb8-4a84-bf0c-839ffc6f477d",
+								"type": "text"
+							},
+							{
+								"key": "X-Business-Transaction-Id",
+								"value": "c7b40ce6-5814-4f8e-acb1-bde2e7bb9af1",
+								"type": "text"
+							},
+							{
+								"key": "X-Business-Transaction-Name",
+								"value": "Ad-Hoc-Test",
+								"type": "text"
+							},
+							{
+								"key": "X-Locale",
+								"value": "pl-PL",
+								"type": "text"
+							},
+							{
+								"key": "X-Currency-Code",
+								"value": "PLN",
+								"type": "text"
+							},
+							{
+								"key": "X-Timestamp",
+								"value": "2022-09-20T09:23:50.5262066Z",
+								"type": "text"
+							},
+							{
+								"key": "X-EmployeeId",
+								"value": "POL1|10074173",
+								"type": "text"
+							},
+							{
+								"key": "x-mock-employee-id",
+								"value": "POL1|10042489",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/workforce/users",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"workforce",
+								"users"
+							],
+							"query": [
+								{
+									"key": "applicationId",
+									"value": "ipf.customer.app",
+									"disabled": true
+								},
+								{
+									"key": "X-EmployeeId",
+									"value": "POL1|10074173",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "workforce/users/{userId}/messages",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Is status code 200?\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"let res=pm.response.json();\r",
+									"let text = \"numberOfMessagesToDownload\";\r",
+									"\r",
+									"pm.test(\"The response contains the string - \" + text, function () {\r",
+									"    pm.expect(pm.response.text()).to.include(text);\r",
+									"    \r",
+									"});\r",
+									"//Negative Test check whether the string numberOfMessagesToDownload is equal to 0\r",
+									"pm.test(\"The String numberOfMessagesToDownload is  not equal to zero,value = \" + res.numberOfMessagesToDownload,function(){\r",
+									"   pm.expect(res.numberOfMessagesToDownload).not.equal(0);\r",
+									"});\r",
+									"// Positive Test check whether the string numberOfMessagesToDownload is greater then 0\r",
+									"pm.test(\"The string numberOfMessagesToDownload is equal to 5, value = \" + res.numberOfMessagesToDownload,function(){\r",
+									"   pm.expect(res.numberOfMessagesToDownload).equal(5);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{askToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "E3vYcF*cBINFeeL}E,chah-,B?rzeyxC",
+								"type": "text"
+							},
+							{
+								"key": "X-Market-Id",
+								"value": "POL1",
+								"type": "text"
+							},
+							{
+								"key": "X-Message-Id",
+								"value": "1f28b3b1-6fb8-4a84-bf0c-839ffc6f477d",
+								"type": "text"
+							},
+							{
+								"key": "X-Business-Transaction-Id",
+								"value": "c7b40ce6-5814-4f8e-acb1-bde2e7bb9af1",
+								"type": "text"
+							},
+							{
+								"key": "X-Business-Transaction-Name",
+								"value": "Ad-Hoc-Test",
+								"type": "text"
+							},
+							{
+								"key": "X-Locale",
+								"value": "pl-PL",
+								"type": "text"
+							},
+							{
+								"key": "X-Currency-Code",
+								"value": "PLN",
+								"type": "text"
+							},
+							{
+								"key": "X-Timestamp",
+								"value": "2022-09-20T09:23:50.5262066Z",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/workforce/users/{{userID}}/messages",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"workforce",
+								"users",
+								"{{userID}}",
+								"messages"
+							],
+							"query": [
+								{
+									"key": "applicationId",
+									"value": "ipf.customer.app",
+									"disabled": true
+								},
+								{
+									"key": "X-EmployeeId",
+									"value": "POL1|10074173",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "loanOffers",
+			"item": [
+				{
+					"name": "loanOffers",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Is status code 200?\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{deviceToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "E3vYcF*cBINFeeL}E,chah-,B?rzeyxC",
+								"type": "text"
+							},
+							{
+								"key": "X-Market-Id",
+								"value": "POL1",
+								"type": "text"
+							},
+							{
+								"key": "X-Message-Id",
+								"value": "c7b40ce6-5814-4f8e-acb1-bde2e7bb9af0",
+								"type": "text"
+							},
+							{
+								"key": "X-Business-Transaction-Id",
+								"value": "c7b40ce6-5814-4f8e-acb1-bde2e7bb9af1",
+								"type": "text"
+							},
+							{
+								"key": "X-Business-Transaction-Name",
+								"value": "Ad-Hoc-Test",
+								"type": "text"
+							},
+							{
+								"key": "X-Locale",
+								"value": "pl-PL",
+								"type": "text"
+							},
+							{
+								"key": "X-Currency-Code",
+								"value": "PLN",
+								"type": "text"
+							},
+							{
+								"key": "X-Timestamp",
+								"value": "2022-09-20T09:23:50.5262066Z",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/loanOffers?applicationId=ipf.customer.app",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"loanOffers"
+							],
+							"query": [
+								{
+									"key": "applicationId",
+									"value": "ipf.customer.app"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "profiles",
+			"item": [
+				{
+					"name": "profiles",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Is status code 200?\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{userToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "E3vYcF*cBINFeeL}E,chah-,B?rzeyxC",
+								"type": "text"
+							},
+							{
+								"key": "X-Market-Id",
+								"value": "POL1",
+								"type": "text"
+							},
+							{
+								"key": "X-Message-Id",
+								"value": "c7b40ce6-5814-4f8e-acb1-bde2e7bb9af0",
+								"type": "text"
+							},
+							{
+								"key": "X-Business-Transaction-Id",
+								"value": "c7b40ce6-5814-4f8e-acb1-bde2e7bb9af1",
+								"type": "text"
+							},
+							{
+								"key": "X-Business-Transaction-Name",
+								"value": "Ad-Hoc-Test",
+								"type": "text"
+							},
+							{
+								"key": "X-Locale",
+								"value": "pl-PL",
+								"type": "text"
+							},
+							{
+								"key": "X-Currency-Code",
+								"value": "PLN",
+								"type": "text"
+							},
+							{
+								"key": "X-Timestamp",
+								"value": "2022-09-20T09:23:50.5262066Z",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/profiles?applicationId=ipf.customer.app",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"profiles"
+							],
+							"query": [
+								{
+									"key": "applicationId",
+									"value": "ipf.customer.app"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "marketingContent",
+			"item": [
+				{
+					"name": "marketingContent",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Is status code 200?\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{deviceToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "E3vYcF*cBINFeeL}E,chah-,B?rzeyxC",
+								"type": "text"
+							},
+							{
+								"key": "X-Market-Id",
+								"value": "POL1",
+								"type": "text"
+							},
+							{
+								"key": "X-Message-Id",
+								"value": "c7b40ce6-5814-4f8e-acb1-bde2e7bb9af0",
+								"type": "text"
+							},
+							{
+								"key": "X-Business-Transaction-Id",
+								"value": "c7b40ce6-5814-4f8e-acb1-bde2e7bb9af1",
+								"type": "text"
+							},
+							{
+								"key": "X-Business-Transaction-Name",
+								"value": "Ad-Hoc-Test",
+								"type": "text"
+							},
+							{
+								"key": "X-Locale",
+								"value": "pl-PL",
+								"type": "text"
+							},
+							{
+								"key": "X-Currency-Code",
+								"value": "PLN",
+								"type": "text"
+							},
+							{
+								"key": "X-Timestamp",
+								"value": "2022-09-20T09:23:50.5262066Z",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/marketingContent?applicationId=ipf.customer.app",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"marketingContent"
+							],
+							"query": [
+								{
+									"key": "applicationId",
+									"value": "ipf.customer.app"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "messages",
+			"item": [
+				{
+					"name": "messages",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Is status code 200?\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{userToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "E3vYcF*cBINFeeL}E,chah-,B?rzeyxC",
+								"type": "text"
+							},
+							{
+								"key": "X-Market-Id",
+								"value": "POL1",
+								"type": "text"
+							},
+							{
+								"key": "X-Message-Id",
+								"value": "c7b40ce6-5814-4f8e-acb1-bde2e7bb9af0",
+								"type": "text"
+							},
+							{
+								"key": "X-Business-Transaction-Id",
+								"value": "c7b40ce6-5814-4f8e-acb1-bde2e7bb9af1",
+								"type": "text"
+							},
+							{
+								"key": "X-Business-Transaction-Name",
+								"value": "Ad-Hoc-Test",
+								"type": "text"
+							},
+							{
+								"key": "X-Locale",
+								"value": "pl-PL",
+								"type": "text"
+							},
+							{
+								"key": "X-Currency-Code",
+								"value": "PLN",
+								"type": "text"
+							},
+							{
+								"key": "X-Timestamp",
+								"value": "2022-09-20T09:23:50.5262066Z",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/messages?applicationId=ipf.customer.app",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"messages"
+							],
+							"query": [
+								{
+									"key": "applicationId",
+									"value": "ipf.customer.app"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "userProfiles",
+			"item": [
+				{
+					"name": "profiles/consents",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Is status code 200?\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{userToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "E3vYcF*cBINFeeL}E,chah-,B?rzeyxC",
+								"type": "text"
+							},
+							{
+								"key": "X-Market-Id",
+								"value": "POL1",
+								"type": "text"
+							},
+							{
+								"key": "X-Message-Id",
+								"value": "c7b40ce6-5814-4f8e-acb1-bde2e7bb9af0",
+								"type": "text"
+							},
+							{
+								"key": "X-Business-Transaction-Id",
+								"value": "c7b40ce6-5814-4f8e-acb1-bde2e7bb9af1",
+								"type": "text"
+							},
+							{
+								"key": "X-Business-Transaction-Name",
+								"value": "Ad-Hoc-Test",
+								"type": "text"
+							},
+							{
+								"key": "X-Locale",
+								"value": "pl-PL",
+								"type": "text"
+							},
+							{
+								"key": "X-Currency-Code",
+								"value": "PLN",
+								"type": "text"
+							},
+							{
+								"key": "X-Timestamp",
+								"value": "2022-09-20T09:23:50.5262066Z",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/profiles/consents",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"profiles",
+								"consents"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Profiles/notifications",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Is status code 200?\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{userToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "E3vYcF*cBINFeeL}E,chah-,B?rzeyxC",
+								"type": "text"
+							},
+							{
+								"key": "X-Market-Id",
+								"value": "POL1",
+								"type": "text"
+							},
+							{
+								"key": "X-Message-Id",
+								"value": "c7b40ce6-5814-4f8e-acb1-bde2e7bb9af0",
+								"type": "text"
+							},
+							{
+								"key": "X-Business-Transaction-Id",
+								"value": "c7b40ce6-5814-4f8e-acb1-bde2e7bb9af1",
+								"type": "text"
+							},
+							{
+								"key": "X-Business-Transaction-Name",
+								"value": "Ad-Hoc-Test",
+								"type": "text"
+							},
+							{
+								"key": "X-Locale",
+								"value": "pl-PL",
+								"type": "text"
+							},
+							{
+								"key": "X-Currency-Code",
+								"value": "PLN",
+								"type": "text"
+							},
+							{
+								"key": "X-Timestamp",
+								"value": "2022-09-20T09:23:50.5262066Z",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/profiles/notifications/eventGroups/disabled?applicationId=ipf.customer.app",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"profiles",
+								"notifications",
+								"eventGroups",
+								"disabled"
+							],
+							"query": [
+								{
+									"key": "applicationId",
+									"value": "ipf.customer.app"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "agreement",
+			"item": [
+				{
+					"name": "/agreement/debtCases",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Is status code 200?\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{userToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "E3vYcF*cBINFeeL}E,chah-,B?rzeyxC",
+								"type": "text"
+							},
+							{
+								"key": "X-Market-Id",
+								"value": "POL1",
+								"type": "text"
+							},
+							{
+								"key": "X-Message-Id",
+								"value": "c7b40ce6-5814-4f8e-acb1-bde2e7bb9af0",
+								"type": "text"
+							},
+							{
+								"key": "X-Business-Transaction-Id",
+								"value": "c7b40ce6-5814-4f8e-acb1-bde2e7bb9af1",
+								"type": "text"
+							},
+							{
+								"key": "X-Business-Transaction-Name",
+								"value": "Ad-Hoc-Test",
+								"type": "text"
+							},
+							{
+								"key": "X-Locale",
+								"value": "pl-PL",
+								"type": "text"
+							},
+							{
+								"key": "X-Currency-Code",
+								"value": "PLN",
+								"type": "text"
+							},
+							{
+								"key": "X-Timestamp",
+								"value": "2022-09-20T09:23:50.5262066Z",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/agreements/{{agreementId}}/debtCases?applicationId=ipf.customer.app",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"agreements",
+								"{{agreementId}}",
+								"debtCases"
+							],
+							"query": [
+								{
+									"key": "applicationId",
+									"value": "ipf.customer.app"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "agreementId",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Is status code 200?\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{userToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "E3vYcF*cBINFeeL}E,chah-,B?rzeyxC",
+								"type": "text"
+							},
+							{
+								"key": "X-Market-Id",
+								"value": "POL1",
+								"type": "text"
+							},
+							{
+								"key": "X-Message-Id",
+								"value": "c7b40ce6-5814-4f8e-acb1-bde2e7bb9af0",
+								"type": "text"
+							},
+							{
+								"key": "X-Business-Transaction-Id",
+								"value": "c7b40ce6-5814-4f8e-acb1-bde2e7bb9af1",
+								"type": "text"
+							},
+							{
+								"key": "X-Business-Transaction-Name",
+								"value": "Ad-Hoc-Test",
+								"type": "text"
+							},
+							{
+								"key": "X-Locale",
+								"value": "pl-PL",
+								"type": "text"
+							},
+							{
+								"key": "X-Currency-Code",
+								"value": "PLN",
+								"type": "text"
+							},
+							{
+								"key": "X-Timestamp",
+								"value": "2022-09-20T09:23:50.5262066Z",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/agreements/{{agreementId}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"agreements",
+								"{{agreementId}}"
+							],
+							"query": [
+								{
+									"key": "applicationId",
+									"value": "ipf.customer.app",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/agreement/events",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Is status code 200?\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{userToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "E3vYcF*cBINFeeL}E,chah-,B?rzeyxC",
+								"type": "text"
+							},
+							{
+								"key": "X-Market-Id",
+								"value": "POL1",
+								"type": "text"
+							},
+							{
+								"key": "X-Message-Id",
+								"value": "c7b40ce6-5814-4f8e-acb1-bde2e7bb9af0",
+								"type": "text"
+							},
+							{
+								"key": "X-Business-Transaction-Id",
+								"value": "c7b40ce6-5814-4f8e-acb1-bde2e7bb9af1",
+								"type": "text"
+							},
+							{
+								"key": "X-Business-Transaction-Name",
+								"value": "Ad-Hoc-Test",
+								"type": "text"
+							},
+							{
+								"key": "X-Locale",
+								"value": "pl-PL",
+								"type": "text"
+							},
+							{
+								"key": "X-Currency-Code",
+								"value": "PLN",
+								"type": "text"
+							},
+							{
+								"key": "X-Timestamp",
+								"value": "2022-09-20T09:23:50.5262066Z",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/agreements/{{agreementId}}/events",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"agreements",
+								"{{agreementId}}",
+								"events"
+							],
+							"query": [
+								{
+									"key": "applicationId",
+									"value": "ipf.customer.app",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/features/insurance",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Is status code 200?\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{userToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "E3vYcF*cBINFeeL}E,chah-,B?rzeyxC",
+								"type": "text"
+							},
+							{
+								"key": "X-Market-Id",
+								"value": "POL1",
+								"type": "text"
+							},
+							{
+								"key": "X-Message-Id",
+								"value": "c7b40ce6-5814-4f8e-acb1-bde2e7bb9af0",
+								"type": "text"
+							},
+							{
+								"key": "X-Business-Transaction-Id",
+								"value": "c7b40ce6-5814-4f8e-acb1-bde2e7bb9af1",
+								"type": "text"
+							},
+							{
+								"key": "X-Business-Transaction-Name",
+								"value": "Ad-Hoc-Test",
+								"type": "text"
+							},
+							{
+								"key": "X-Locale",
+								"value": "pl-PL",
+								"type": "text"
+							},
+							{
+								"key": "X-Currency-Code",
+								"value": "PLN",
+								"type": "text"
+							},
+							{
+								"key": "X-Timestamp",
+								"value": "2022-09-20T09:23:50.5262066Z",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/agreements/{{agreementId}}/features/insurance?applicationId=ipf.customer.app",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"agreements",
+								"{{agreementId}}",
+								"features",
+								"insurance"
+							],
+							"query": [
+								{
+									"key": "applicationId",
+									"value": "ipf.customer.app"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/features/PaymentHoliday",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Is status code 200?\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{userToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "E3vYcF*cBINFeeL}E,chah-,B?rzeyxC",
+								"type": "text"
+							},
+							{
+								"key": "X-Market-Id",
+								"value": "POL1",
+								"type": "text"
+							},
+							{
+								"key": "X-Message-Id",
+								"value": "c7b40ce6-5814-4f8e-acb1-bde2e7bb9af0",
+								"type": "text"
+							},
+							{
+								"key": "X-Business-Transaction-Id",
+								"value": "c7b40ce6-5814-4f8e-acb1-bde2e7bb9af1",
+								"type": "text"
+							},
+							{
+								"key": "X-Business-Transaction-Name",
+								"value": "Ad-Hoc-Test",
+								"type": "text"
+							},
+							{
+								"key": "X-Locale",
+								"value": "pl-PL",
+								"type": "text"
+							},
+							{
+								"key": "X-Currency-Code",
+								"value": "PLN",
+								"type": "text"
+							},
+							{
+								"key": "X-Timestamp",
+								"value": "2022-09-20T09:23:50.5262066Z",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/agreements/{{agreementId}}/features/insurance?applicationId=ipf.customer.app",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"agreements",
+								"{{agreementId}}",
+								"features",
+								"insurance"
+							],
+							"query": [
+								{
+									"key": "applicationId",
+									"value": "ipf.customer.app"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/payments/expected",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Is status code 200?\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{userToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "E3vYcF*cBINFeeL}E,chah-,B?rzeyxC",
+								"type": "text"
+							},
+							{
+								"key": "X-Market-Id",
+								"value": "POL1",
+								"type": "text"
+							},
+							{
+								"key": "X-Message-Id",
+								"value": "c7b40ce6-5814-4f8e-acb1-bde2e7bb9af0",
+								"type": "text"
+							},
+							{
+								"key": "X-Business-Transaction-Id",
+								"value": "c7b40ce6-5814-4f8e-acb1-bde2e7bb9af1",
+								"type": "text"
+							},
+							{
+								"key": "X-Business-Transaction-Name",
+								"value": "Ad-Hoc-Test",
+								"type": "text"
+							},
+							{
+								"key": "X-Locale",
+								"value": "pl-PL",
+								"type": "text"
+							},
+							{
+								"key": "X-Currency-Code",
+								"value": "PLN",
+								"type": "text"
+							},
+							{
+								"key": "X-Timestamp",
+								"value": "2022-09-20T09:23:50.5262066Z",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/agreements/{{agreementId}}/features/insurance?applicationId=ipf.customer.app",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"agreements",
+								"{{agreementId}}",
+								"features",
+								"insurance"
+							],
+							"query": [
+								{
+									"key": "applicationId",
+									"value": "ipf.customer.app"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/agreements/{agreementId}/paymentHolidaySchedule",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Is status code 200?\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{userToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "E3vYcF*cBINFeeL}E,chah-,B?rzeyxC",
+								"type": "text"
+							},
+							{
+								"key": "X-Market-Id",
+								"value": "POL1",
+								"type": "text"
+							},
+							{
+								"key": "X-Message-Id",
+								"value": "c7b40ce6-5814-4f8e-acb1-bde2e7bb9af0",
+								"type": "text"
+							},
+							{
+								"key": "X-Business-Transaction-Id",
+								"value": "c7b40ce6-5814-4f8e-acb1-bde2e7bb9af1",
+								"type": "text"
+							},
+							{
+								"key": "X-Business-Transaction-Name",
+								"value": "Ad-Hoc-Test",
+								"type": "text"
+							},
+							{
+								"key": "X-Locale",
+								"value": "pl-PL",
+								"type": "text"
+							},
+							{
+								"key": "X-Currency-Code",
+								"value": "PLN",
+								"type": "text"
+							},
+							{
+								"key": "X-Timestamp",
+								"value": "2022-09-20T09:23:50.5262066Z",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/agreements/{{agreementId}}/paymentHolidaySchedule?applicationId=ipf.customer.app",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"agreements",
+								"{{agreementId}}",
+								"paymentHolidaySchedule"
+							],
+							"query": [
+								{
+									"key": "applicationId",
+									"value": "ipf.customer.app"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Customers",
+			"item": [
+				{
+					"name": "/customers/{customerId}/agreements/describe",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Is status code 200?\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{userToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "E3vYcF*cBINFeeL}E,chah-,B?rzeyxC",
+								"type": "text"
+							},
+							{
+								"key": "X-Market-Id",
+								"value": "POL1",
+								"type": "text"
+							},
+							{
+								"key": "X-Message-Id",
+								"value": "c7b40ce6-5814-4f8e-acb1-bde2e7bb9af0",
+								"type": "text"
+							},
+							{
+								"key": "X-Business-Transaction-Id",
+								"value": "c7b40ce6-5814-4f8e-acb1-bde2e7bb9af1",
+								"type": "text"
+							},
+							{
+								"key": "X-Business-Transaction-Name",
+								"value": "Ad-Hoc-Test",
+								"type": "text"
+							},
+							{
+								"key": "X-Locale",
+								"value": "pl-PL",
+								"type": "text"
+							},
+							{
+								"key": "X-Currency-Code",
+								"value": "PLN",
+								"type": "text"
+							},
+							{
+								"key": "X-Timestamp",
+								"value": "2022-09-20T09:23:50.5262066Z",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/customers/{{customerId}}/agreements/describe?applicationId=ipf.customer.app",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"customers",
+								"{{customerId}}",
+								"agreements",
+								"describe"
+							],
+							"query": [
+								{
+									"key": "applicationId",
+									"value": "ipf.customer.app"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/customers/{customerId}/insurances/describe",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Is status code 200?\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{userToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "E3vYcF*cBINFeeL}E,chah-,B?rzeyxC",
+								"type": "text"
+							},
+							{
+								"key": "X-Market-Id",
+								"value": "POL1",
+								"type": "text"
+							},
+							{
+								"key": "X-Message-Id",
+								"value": "c7b40ce6-5814-4f8e-acb1-bde2e7bb9af0",
+								"type": "text"
+							},
+							{
+								"key": "X-Business-Transaction-Id",
+								"value": "c7b40ce6-5814-4f8e-acb1-bde2e7bb9af1",
+								"type": "text"
+							},
+							{
+								"key": "X-Business-Transaction-Name",
+								"value": "Ad-Hoc-Test",
+								"type": "text"
+							},
+							{
+								"key": "X-Locale",
+								"value": "pl-PL",
+								"type": "text"
+							},
+							{
+								"key": "X-Currency-Code",
+								"value": "PLN",
+								"type": "text"
+							},
+							{
+								"key": "X-Timestamp",
+								"value": "2022-09-20T09:23:50.5262066Z",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/customers/{{customerId}}/insurances/describe?applicationId=ipf.customer.app",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"customers",
+								"{{customerId}}",
+								"insurances",
+								"describe"
+							],
+							"query": [
+								{
+									"key": "applicationId",
+									"value": "ipf.customer.app"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/customers/{customerId}/payments/past",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Is status code 200?\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{userToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "E3vYcF*cBINFeeL}E,chah-,B?rzeyxC",
+								"type": "text"
+							},
+							{
+								"key": "X-Market-Id",
+								"value": "POL1",
+								"type": "text"
+							},
+							{
+								"key": "X-Message-Id",
+								"value": "c7b40ce6-5814-4f8e-acb1-bde2e7bb9af0",
+								"type": "text"
+							},
+							{
+								"key": "X-Business-Transaction-Id",
+								"value": "c7b40ce6-5814-4f8e-acb1-bde2e7bb9af1",
+								"type": "text"
+							},
+							{
+								"key": "X-Business-Transaction-Name",
+								"value": "Ad-Hoc-Test",
+								"type": "text"
+							},
+							{
+								"key": "X-Locale",
+								"value": "pl-PL",
+								"type": "text"
+							},
+							{
+								"key": "X-Currency-Code",
+								"value": "PLN",
+								"type": "text"
+							},
+							{
+								"key": "X-Timestamp",
+								"value": "2022-09-20T09:23:50.5262066Z",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/customers/{{customerId}}/payments/past?source=focus",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"customers",
+								"{{customerId}}",
+								"payments",
+								"past"
+							],
+							"query": [
+								{
+									"key": "applicationId",
+									"value": "ipf.customer.app",
+									"disabled": true
+								},
+								{
+									"key": "source",
+									"value": "focus"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/customers/{customerId}/representatives",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Is status code 200?\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{userToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "E3vYcF*cBINFeeL}E,chah-,B?rzeyxC",
+								"type": "text"
+							},
+							{
+								"key": "X-Market-Id",
+								"value": "POL1",
+								"type": "text"
+							},
+							{
+								"key": "X-Message-Id",
+								"value": "c7b40ce6-5814-4f8e-acb1-bde2e7bb9af0",
+								"type": "text"
+							},
+							{
+								"key": "X-Business-Transaction-Id",
+								"value": "c7b40ce6-5814-4f8e-acb1-bde2e7bb9af1",
+								"type": "text"
+							},
+							{
+								"key": "X-Business-Transaction-Name",
+								"value": "Ad-Hoc-Test",
+								"type": "text"
+							},
+							{
+								"key": "X-Locale",
+								"value": "pl-PL",
+								"type": "text"
+							},
+							{
+								"key": "X-Currency-Code",
+								"value": "PLN",
+								"type": "text"
+							},
+							{
+								"key": "X-Timestamp",
+								"value": "2022-09-20T09:23:50.5262066Z",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/customers/{{customerId}}/representatives",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"customers",
+								"{{customerId}}",
+								"representatives"
+							],
+							"query": [
+								{
+									"key": "applicationId",
+									"value": "ipf.customer.app",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/customers/{customerId}/payments/expected",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Is status code 200?\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{userToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "E3vYcF*cBINFeeL}E,chah-,B?rzeyxC",
+								"type": "text"
+							},
+							{
+								"key": "X-Market-Id",
+								"value": "POL1",
+								"type": "text"
+							},
+							{
+								"key": "X-Message-Id",
+								"value": "c7b40ce6-5814-4f8e-acb1-bde2e7bb9af0",
+								"type": "text"
+							},
+							{
+								"key": "X-Business-Transaction-Id",
+								"value": "c7b40ce6-5814-4f8e-acb1-bde2e7bb9af1",
+								"type": "text"
+							},
+							{
+								"key": "X-Business-Transaction-Name",
+								"value": "Ad-Hoc-Test",
+								"type": "text"
+							},
+							{
+								"key": "X-Locale",
+								"value": "pl-PL",
+								"type": "text"
+							},
+							{
+								"key": "X-Currency-Code",
+								"value": "PLN",
+								"type": "text"
+							},
+							{
+								"key": "X-Timestamp",
+								"value": "2022-09-20T09:23:50.5262066Z",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/customers/{{customerId}}/payments/expected?source=focus",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"customers",
+								"{{customerId}}",
+								"payments",
+								"expected"
+							],
+							"query": [
+								{
+									"key": "applicationId",
+									"value": "ipf.customer.app",
+									"disabled": true
+								},
+								{
+									"key": "source",
+									"value": "focus"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Documents",
+			"item": [
+				{
+					"name": "/documents/e-receipts/{receiptNumber}/download",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Is status code 200?\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{userToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "E3vYcF*cBINFeeL}E,chah-,B?rzeyxC",
+								"type": "text"
+							},
+							{
+								"key": "X-Market-Id",
+								"value": "POL1",
+								"type": "text"
+							},
+							{
+								"key": "X-Message-Id",
+								"value": "1f28b3b1-6fb8-4a84-bf0c-839ffc6f477d",
+								"type": "text"
+							},
+							{
+								"key": "X-Business-Transaction-Id",
+								"value": "c7b40ce6-5814-4f8e-acb1-bde2e7bb9af1",
+								"type": "text"
+							},
+							{
+								"key": "X-Business-Transaction-Name",
+								"value": "Ad-Hoc-Test",
+								"type": "text"
+							},
+							{
+								"key": "X-Locale",
+								"value": "pl-PL",
+								"type": "text"
+							},
+							{
+								"key": "X-Currency-Code",
+								"value": "PLN",
+								"type": "text"
+							},
+							{
+								"key": "X-Timestamp",
+								"value": "2022-09-20T09:23:50.5262066Z",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/documents/e-receipts/{{receiptNumber}}/download",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"documents",
+								"e-receipts",
+								"{{receiptNumber}}",
+								"download"
+							],
+							"query": [
+								{
+									"key": "applicationId",
+									"value": "ipf.customer.app",
+									"disabled": true
+								},
+								{
+									"key": "X-EmployeeId",
+									"value": "POL1|10074173",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "LoanApplication",
+			"item": [
+				{
+					"name": "/documents/informationFormUrl/{productId}",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Is status code 200?\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{userToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "E3vYcF*cBINFeeL}E,chah-,B?rzeyxC",
+								"type": "text"
+							},
+							{
+								"key": "X-Market-Id",
+								"value": "POL1",
+								"type": "text"
+							},
+							{
+								"key": "X-Message-Id",
+								"value": "c7b40ce6-5814-4f8e-acb1-bde2e7bb9af0",
+								"type": "text"
+							},
+							{
+								"key": "X-Business-Transaction-Id",
+								"value": "c7b40ce6-5814-4f8e-acb1-bde2e7bb9af1",
+								"type": "text"
+							},
+							{
+								"key": "X-Business-Transaction-Name",
+								"value": "Ad-Hoc-Test",
+								"type": "text"
+							},
+							{
+								"key": "X-Locale",
+								"value": "pl-PL",
+								"type": "text"
+							},
+							{
+								"key": "X-Currency-Code",
+								"value": "PLN",
+								"type": "text"
+							},
+							{
+								"key": "X-Timestamp",
+								"value": "2022-09-20T09:23:50.5262066Z",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/documents/informationFormUrl/{{productId}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"documents",
+								"informationFormUrl",
+								"{{productId}}"
+							],
+							"query": [
+								{
+									"key": "applicationId",
+									"value": "ipf.customer.app",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://api.test.cusapp.ipf.cloud/cus-app-backend-uat/uat",
+			"type": "string"
+		},
+		{
+			"key": "deviceToken",
+			"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IkIyMTNCNTFCNkMyRTEwOUYwRjQ1QjkxRDU0MjhFQTQwODk1NUUwQzMiLCJ0eXAiOiJKV1QiLCJ4NXQiOiJzaE8xRzJ3dUVKOFBSYmtkVkNqcVFJbFY0TU0ifQ.eyJuYmYiOjE2ODM4ODk5MzMsImV4cCI6MTY4Mzg5MzUzMywiaXNzIjoiaHR0cHM6Ly9pcGYtYXdzLWN1c2FwcC10ZXN0LWNpZHAtdWF0LmludHJhbmV0LXRlc3QuaXBmLmNsb3VkIiwiYXVkIjpbImh0dHBzOi8vaXBmLWF3cy1jdXNhcHAtdGVzdC1jaWRwLXVhdC5pbnRyYW5ldC10ZXN0LmlwZi5jbG91ZC9yZXNvdXJjZXMiLCJjbWFiIl0sImNsaWVudF9pZCI6ImNtYWQiLCJzdWIiOiJkOWExMzU0MzY2MjI0M2IzOGRkZjg1OTFiZDU1NGIyNiIsImF1dGhfdGltZSI6MTY4Mzg4OTkzMywiaWRwIjoibG9jYWwiLCJlbnJvbGxtZW50X2lkIjoiZDlhMTM1NDM2NjIyNDNiMzhkZGY4NTkxYmQ1NTRiMjYiLCJtYXJrZXRfaWQiOiJQT0wxIiwidXNlcl90eXBlIjoiYW5vbnltb3VzVXNlciIsImp0aSI6ImFlMmVkZDdkZmFiZmE5MDM0ZDY0YjQxYmVkMzdiMDhkIiwic2NvcGUiOlsib3BlbmlkIiwiY21hYi9kZXZpY2VzOmNoYW5nZVBpbkNvZGUiLCJjbWFiL2RldmljZXM6aW5pdGlhdGVQaW5Db2RlUmVzZXQiLCJjbWFiL2RldmljZXM6Y29tcGxldGVQaW5Db2RlU2V0VXAiLCJjbWFiL2RldmljZXM6YWN0aXZhdGUiLCJjbWFiL2RldmljZXM6dXBkYXRlOm93biIsImNtYWIvZGV2aWNlczpyZWFkOm93biIsImNtYWIvbWFya2V0aW5nLWNvbnRlbnQ6cmVhZDpvd24iLCJjbWFiL21lc3NhZ2VzLXJlZ2lzdHJhdGlvbjpjcmVhdGU6b3duIiwiY21hYi9wcm9kdWN0czpyZWFkOmFsbCIsImNtYWIvaW5zdXJhbmNlLXByb2R1Y3RzOnJlYWQ6YWxsIiwiY21hYi9wcm9maWxlOnNldC11cCIsImNtYWIvcmVmZXJlbmNlLWRhdGE6cmVhZDphbGwiLCJjbWFiL3VzZXJzOnNpZ24tdXAtc2VsZi1zZXJ2aWNlIiwiY21hYi91c2VyczpzaWduLXVwLXRlbXBvcmFyeSIsImNtYWIvbG9hbi1hcHBsaWNhdGlvbnM6Y3JlYXRlOm93biIsImNtYWIvbG9hbi1vZmZlcnM6cmVhZDpvd24iXSwiYW1yIjpbImFub255bW91cyJdfQ.gz7lwCK4y1Io-T_mFdcc6rm8lpBga7SKUVrijHohkOpQzSUh8hSbFWb8fvoyQO7XuNQ7E4EWBPcGZ3z6-h2cw1vddMweLsRo4vp1NMvGYfHlxjgGUEerRb66-7-IaKC7qvJ7jo3jlrldus0l3Ajp31gr_g6ktyC3I7bWzS7PKF7G66Vq9GRgCDLOyMHTCD1oE1LjJl33DC8HNmocgzrqIPiteZBzl8Y_31pW9YSpwmr0Lw92qIUsVh3aiAsJOPeRJnYcqhclkWiZIhACuVlsIRV1oVmaoZRFTj0pR5KCxvw_kUHkrMVtK6Y_nziWOxSUkASgIJlzI2steTVnGNHNsg ",
+			"type": "string"
+		},
+		{
+			"key": "userToken",
+			"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IkIyMTNCNTFCNkMyRTEwOUYwRjQ1QjkxRDU0MjhFQTQwODk1NUUwQzMiLCJ0eXAiOiJKV1QiLCJ4NXQiOiJzaE8xRzJ3dUVKOFBSYmtkVkNqcVFJbFY0TU0ifQ.eyJuYmYiOjE2ODM4ODk5MzksImV4cCI6MTY4Mzg5MzUzOSwiaXNzIjoiaHR0cHM6Ly9pcGYtYXdzLWN1c2FwcC10ZXN0LWNpZHAtdWF0LmludHJhbmV0LXRlc3QuaXBmLmNsb3VkIiwiYXVkIjpbImh0dHBzOi8vaXBmLWF3cy1jdXNhcHAtdGVzdC1jaWRwLXVhdC5pbnRyYW5ldC10ZXN0LmlwZi5jbG91ZC9yZXNvdXJjZXMiLCJjbWFiIl0sImNsaWVudF9pZCI6ImNtYXUiLCJzdWIiOiJjZTc5MGI1Mi0xODBlLTQ3YjgtYmZjNy01MDdjZDUxNGI3Y2IiLCJhdXRoX3RpbWUiOjE2ODM4ODk5MzksImlkcCI6ImxvY2FsIiwiZW5yb2xsbWVudF9pZCI6ImQ5YTEzNTQzNjYyMjQzYjM4ZGRmODU5MWJkNTU0YjI2IiwidXNlcl9pZGVudGlmaWVycyI6WyJmb2N1czpjdXN0b21lcklkOjQxMDAwODAxMTQzIiwiY2lkbTp1c2VySWQ6Y2U3OTBiNTItMTgwZS00N2I4LWJmYzctNTA3Y2Q1MTRiN2NiIl0sIm1hcmtldF9pZCI6IlBPTDEiLCJ1c2VyX3R5cGUiOiJjdXN0b21lciIsImp0aSI6ImI0OWQzMTJiNDhhOTNlNzBlODk0ZTg5NDQ4NzI2MjYwIiwic2NvcGUiOlsib3BlbmlkIiwiY21hYi9hZ3JlZW1lbnRzOnJlYWQ6b3duIiwiY21hYi9hZ3JlZW1lbnQtZXZlbnRzOnJlYWQ6b3duIiwiY21hYi9jdXN0b21lcnM6cmVhZDpvd24iLCJjbWFiL2RlYnQtY2FzZXM6cmVhZDpvd24iLCJjbWFiL2RlYnRjYXNlLWV2ZW50czpyZWFkOm93biIsImNtYWIvZGV2aWNlczpjaGFuZ2VQaW5Db2RlIiwiY21hYi9kZXZpY2VzOnVwZGF0ZTpvd24iLCJjbWFiL2RldmljZXM6cmVhZDpvd24iLCJjbWFiL2ZpbmFuY2lhbC10cmFuc2FjdGlvbnM6cmVhZDpvd24iLCJjbWFiL2luc3VyYW5jZXM6cmVhZDpvd24iLCJjbWFiL2xvYW4tYXBwbGljYXRpb25zOmNyZWF0ZTpvd24iLCJjbWFiL2xvYW4tb2ZmZXJzOnJlYWQ6b3duIiwiY21hYi9tYXJrZXRpbmctY29udGVudDpyZWFkOm93biIsImNtYWIvbWVzc2FnZXM6dXBkYXRlOm93biIsImNtYWIvbWVzc2FnZXM6cmVhZDpvd24iLCJjbWFiL21lc3NhZ2VzLXJlZ2lzdHJhdGlvbjpjcmVhdGU6b3duIiwiY21hYi9wYXltZW50LWZsZXhpYmlsaXR5LXJlcXVlc3RzOmNyZWF0ZTpvd24iLCJjbWFiL3BheW1lbnQtZmxleGliaWxpdHktcmVxdWVzdHM6cmVhZDpvd24iLCJjbWFiL3Byb2R1Y3RzOnJlYWQ6YWxsIiwiY21hYi9pbnN1cmFuY2UtcHJvZHVjdHM6cmVhZDphbGwiLCJjbWFiL3Byb2ZpbGU6cmVhZDpvd24iLCJjbWFiL3Byb2ZpbGUtY29uc2VudHM6Y3JlYXRlOm93biIsImNtYWIvcHJvZmlsZS1ub3RpZmljYXRpb25zOnJlYWQ6b3duIiwiY21hYi9wcm9maWxlLW5vdGlmaWNhdGlvbnM6dXBkYXRlOm93biIsImNtYWIvcmVmZXJlbmNlLWRhdGE6cmVhZDphbGwiLCJjbWFiL3JlcHJlc2VudGF0aXZlczpyZWFkOm93biJdLCJhbXIiOlsiZGV2aWNlUGluQ29kZSIsImRldmljZVRvdHAiXX0.cJ8ui4qB7ezdlVGAE_TjtLJGbfrTUy8ARQZ7gGDTD44dsS-sQh3-SiMvTI53TexWPp0ORIjnERP35v8OKmQuhajL7LBCh5EgXti3tk3-i1WsXdpsIUCfaMQb49HXqcDVoO8kH19fTrIDMDShE4a3KgiBUVZppDSqfvjs6_JKMojkG6JJ2xnCwEuBtLIjfKaeLOaXSulgECMMS5wzWRdnv0axOvR7GeBcRRvnrQpLwLg8S8QSPBMEbU_MAR_mnhrL0OVs2SLwbqh5nvkfxB_QSTbTFsINIaebfGn6mzBw9uMzbHvWUM1VmRMcufllRwnrre1vQqprWVK8fon_g2FAbQ",
+			"type": "string"
+		},
+		{
+			"key": "agreementId",
+			"value": "focus:agreementId:41000505655",
+			"type": "string"
+		},
+		{
+			"key": "askToken",
+			"value": ""
+		},
+		{
+			"key": "customerId",
+			"value": "focus:customerId:41000801143",
+			"type": "string"
+		},
+		{
+			"key": "receiptNumber",
+			"value": "AAAWJ-2",
+			"type": "string"
+		},
+		{
+			"key": "marketingContentCode",
+			"value": "Offers-Loan-Default-Card",
+			"type": "string"
+		},
+		{
+			"key": "userID",
+			"value": "ce790b52-180e-47b8-bfc7-507cd514b7cb",
+			"type": "string"
+		},
+		{
+			"key": "productId",
+			"value": "3000010706",
+			"type": "string"
+		}
+	]
+}
